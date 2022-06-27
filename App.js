@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Consult from './Before/Consult';
+import NavigationOut from './Before/NavigationOut';
+
 export default function App() {
   return (
-    <Consult />
+    <NavigationOut />
   );
 }
 
