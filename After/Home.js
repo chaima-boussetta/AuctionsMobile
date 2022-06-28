@@ -20,7 +20,7 @@ import Logo from '../assets/logo.png';
     },[])
     return (
 
-                <ScrollView>
+                <ScrollView style={{backgroundColor:'#d4d4d4'}}>
                     <View style={styles.header}>
                         <Text style={{fontStyle:'italic',fontSize:16,color:'#FFD32D'}}>Welcome To SHINY AUCTIONS APP</Text>
                         <img src={Logo} style={{flex:2,width:50}} />
@@ -34,7 +34,7 @@ import Logo from '../assets/logo.png';
                                 <Text style={{fontSize:20,color:'white'}}>{auction.name}</Text>
                                 <Text style={{fontSize:20,color:'white'}}>{auction.price}$</Text>
                                 <TouchableOpacity 
-                                onPress={() => navigation.navigate('DetailsOut',auction)}
+                                onPress={() => navigation.navigate('Details',auction)}
                                 style={{height:40,width:150,backgroundColor:'#FFD32D',alignItems:'center',margin:5,borderRadius:5}}>
                                     <Text style={{fontSize:24,fontStyle:'italic',fontWeight:'bold'}}>View Details</Text>
                                 </TouchableOpacity>
