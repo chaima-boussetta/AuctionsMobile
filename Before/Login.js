@@ -32,7 +32,7 @@ function Login ({navigation}) {
     }
     const welcome=()=>{
         postData();
-        navigation.navigate("Test");
+        navigation.navigate("MainContainer");
     }
     return(
         <ScrollView style={{backgroundColor:'#008E89'}}>

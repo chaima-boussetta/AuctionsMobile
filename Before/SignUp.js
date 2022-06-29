@@ -55,13 +55,13 @@ function SignUp({navigation}){
     }
     const welcome=()=>{
         postData();
-        navigation.navigate("Home",username,email,firstName,lastName);
+        navigation.navigate("MainContainer");
     }
         return(
             <ScrollView style={{backgroundColor:'#008E89'}}>
                 <View style={styles.container}>
                     <Image source={require('../assets/logo.png')} resizeMode="center" style={styles.image} />
-                    <Text style={styles.texteTitle}>Let's Get Started</Text>
+                    <Text style={[styles.texteTitle,{fontSize:40,fontWeight:1000}]}>Let's Get Started</Text>
                     <Text style={styles.textBody}>Create an account to get all features</Text>
                     <TextInput style={styles.input} placeholder='First Name' value={firstName}  onChange={handleChangeFname} />
                     <TextInput style={styles.input}  placeholder='Last Name' value={lastName} onChange={handleChangeLname} />
