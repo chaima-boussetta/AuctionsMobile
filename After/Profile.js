@@ -4,8 +4,10 @@ import { useRoute } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Logo from '../assets/logo.png'
 import ProfileLogo from '../assets/profile.png'
+import {useRoute} from '@react-navigation/native'
 
 export default function Profile({navigation}){
+    const route = useRoute();
     return(
         <ScrollView style={{backgroundColor:'#085E7D'}}>
             <View style={styles.header}>
@@ -14,10 +16,10 @@ export default function Profile({navigation}){
             </View>
             <View style={styles.info}>
                 <img src={ProfileLogo} style={{width:150}} />
-                <Text style={styles.input}   >First Name : userFirstName</Text>
-                <Text style={styles.input}   >Last Name : userLastName</Text>
-                <Text style={styles.input}  >Email : userexample@gmail.com</Text>
-                <Text style={styles.input}  >UserName : newUser</Text>
+                <Text style={styles.input}   >First Name : {route.params.firstName}</Text>
+                <Text style={styles.input}   >Last Name : {route.params.lastName}</Text>
+                <Text style={styles.input}  >Email :{route.params.email} </Text>
+                <Text style={styles.input}  >UserName : {route.params.userName} </Text>
             </View>
         </ScrollView>
     )
